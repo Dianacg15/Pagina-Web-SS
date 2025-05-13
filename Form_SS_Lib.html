@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/Logo.png">
+    <title>Servicio Social</title>
+  
+  <style>
+
+    .form-group {
+      position: relative;
+    }
+    
+    .help-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .help-icon:hover .help-text {
+      display: block;
+    }
+    
+    .help-text {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: -150%; 
+      width: 200px;
+      max-width: calc(100vw - 40px);
+      padding: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      z-index: 1;
+    }
+    
+  </style>
+
+<body>
+  <header>
+    <div class="logo-buttons-container">
+      <div class="logo">
+        <img src="img/Logo.png" alt="Logo" oncontextmenu="return false;">
+      </div>
+      <a href="Index.html" class="button">Inicio</a>
+      <a href="Menu_SS.html" class="button">Atrás</a>
+    </div>
+  </header>
+  
+  <div class="content2">
+    <h1><center>Formulario de carta de terminación para los prestatarios de Servicio Social</center></h1>
+  </div>
+  
+  <div class="content3">
+    <div class="text-container">
+      <p>Informacion</p>
+    </div>
+  </div>
+  <div class="content4">
+    <div class="card">
+      <div class="card-body">
+        <br>
+        <form action="insertar_lib.php" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="nombreExpide">Nombre del remitente:</label>
+            <input type="text" name="nombreExpide"class="form-control" id="nombreExpide" required>
+            <div class="help-icon">
+              <i class="fas fa-question"></i>
+              <div class="help-text">
+                Ingrese el nombre del remitente tal como aparece en su carta de presentación.
+              </div>
+            </div>
+          </div>
+        
+        <div class="form-group">
+          <label for="cargoPer">Cargo:</label>
+          <input type="text" name="cargoPer"class="form-control" id="cargoPer" required>
+          <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese el cargo del destinatario.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nombreEscuela">Escuela:</label>
+          <input type="text" name="nombreEscuela"class="form-control" id="nombreEscuela" required>
+          <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese la licenciatura que cursa.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nombreEstudiante">Prestatario:</label>
+          <input text="text" name="nombreEstudiante" class="form-control" id="nombreEstudiante" required>
+            <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese su nombre completo aquí.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="carrera">Carrera:</label>
+          <input type="text" name="carrera" class="form-control" id="carrera" required>
+            <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese su programa educativo.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="noCuenta">Matrícula:</label>
+          <input type="text" name="noCuenta"class="form-control" id="noCuenta" required>
+            <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese su número de control escolar.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="area">Area:</label>
+          <input type="text" name="area"class="form-control" id="area" required>
+            <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese la área realizada.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subarea">Subarea:</label>
+          <input type="text" name="subarea"class="form-control" id="subarea">
+            <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese el nombre de la subarea tal como aparece en su carta de aceptación.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="jefeInmediato">Jefe Inmediato:</label>
+          <input type="text" name="jefeInmediato"class="form-control" id="jefeInmediato" required>
+            <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese el nombre de su jefe inmediato.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="numHoras">Número de horas:</label>
+          <input type="number" name="numHoras"class="form-control" id="numHoras" required>
+          <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese las horas totales.
+            </div>
+          </div>
+        </div>
+
+       <div class="form-group">
+        <label for="periodo_inicio">Período de inicio:</label>
+        <input type="text" name="periodo_inicio"class="form-control" id="periodo_inicio" required>
+        <div class="help-icon">
+          <i class="fas fa-question"></i>
+          <div class="help-text">
+            Ingrese el periodo de inicio.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label for="periodo_final">Período concluído:</label>
+          <input type="text" name="periodo_final"class="form-control" id="periodo_final" required>
+          <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Ingrese el periodo final.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Foto tamaño infantil a color (vestimenta
+            formal):</label>
+          <input type="file" name="foto" class="form-control" id="foto"
+            accept="image/jpeg, image/png">
+          <div class="help-icon">
+            <i class="fas fa-question"></i>
+            <div class="help-text">
+              Seleccione una foto para subir.
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" name="registrar" class="btn btn-primary">Registrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <script>
+    const fotoInput = document.getElementById('foto');
+    fotoInput.addEventListener('change', function () {
+      const file = fotoInput.files[0];
+      const fileSizeKB = file.size / 1024;
+      const minSizeKB = 20; 
+      const maxSizeKB = 500; 
+
+      if (fileSizeKB < minSizeKB || fileSizeKB > maxSizeKB) {
+        alert(`El tamaño del archivo debe estar entre ${minSizeKB} KB y ${maxSizeKB} KB.`);
+        fotoInput.value = ''; 
+      }
+    });
+  </script>
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <footer>
+    <img src="img/Footer.png" class="footer-logo" oncontextmenu="return false;">
+  </footer>
+</body>
+</html>

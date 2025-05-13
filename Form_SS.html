@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    
+    .form-group {
+      position: relative;
+    }
+    
+    .help-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .help-icon:hover .help-text {
+      display: block;
+    }
+    
+    .help-text {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: -150%; 
+      width: 200px;
+      max-width: calc(100vw - 40px);
+      padding: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      z-index: 1;
+    }
+  </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Forms.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/Logo.png">
+    <title>Servicio Social</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-buttons-container">
+        <div class="logo">
+          <img src="img/Logo.png" alt="Logo" oncontextmenu="return false;">
+        </div>
+        <a href="Index.html" class="button">Inicio</a>
+        <a href="Menu_SS.html" class="button">Atrás</a>
+      </div>
+    </header>
+    <div class="content2">
+      <h1><center>Formulario de carta de aceptación para los prestatarios de
+          Servicio Social</center></h1>
+    </div>
+    <div class="content3">
+      <div class="text-container">
+        <p>Informacion</p>
+
+      </div>
+    </div>
+    <div class="content4">
+      <div class="card">
+        <div class="card-body">
+          <br>
+          <form action="insertar.php" method="POST"
+            enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="directivo">Nombre del remitente: </label>
+              <input type="text" name="directivo" class="form-control"
+                id="directivo" required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Ingrese el nombre del remitente tal como aparece en su carta
+                  de presentación.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cargo">Cargo: </label>
+              <input type="text" name="cargo" class="form-control" id="cargo"
+                required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Ingrese el cargo del destinatario.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="escuela">Escuela:</label>
+              <input type="text" name="escuela" class="form-control"
+                id="escuela" required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Ingrese el nombre de su escuela.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="prestatario">Prestatario:</label>
+              <input text="text" name="prestatario" class="form-control"
+                id="prestatario" required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Ingrese su nombre completo.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="carrera">Carrera:</label>
+              <input type="text" name="carrera" class="form-control"
+                id="carrera" required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Ingrese la licenciatura que cursa.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="matricula">Matrícula:</label>
+              <input type="text" name="matricula" class="form-control"
+                id="matricula" required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Ingrese su número de control escolar.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="horas">Total de horas a cubrir:</label>
+              <input type="number" name="horas" class="form-control" id="horas"
+                required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Horas establecidas en tu carta de presentación.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="foto">Foto tamaño infantil a color (vestimenta
+                formal):</label>
+              <input type="file" name="foto" class="form-control" id="foto"
+                accept="image/jpeg, image/png">
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Seleccione una foto para subir.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input type="number" name="telefono" class="form-control" id="telefono">
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Tu número de teléfono.
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="dj">Distrito Judicial en donde desea hacer su servicio:</label>
+              <input type="text" name="dj" class="form-control" id="dj" required>
+              <div class="help-icon">
+                <i class="fas fa-question"></i>
+                <div class="help-text">
+                  Por ejemplo: Tulancingo, Tula, etc.
+                </div>
+              </div>
+            </div>
+         
+            <button type="submit" name="registrar" class="btn btn-primary">Registrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+
+
+const fotoInput = document.getElementById('foto');
+  fotoInput.addEventListener('change', function () {
+    const file = fotoInput.files[0];
+    const fileSizeKB = file.size / 1024;
+    const minSizeKB = 20; 
+    const maxSizeKB = 500; 
+
+    if (fileSizeKB < minSizeKB || fileSizeKB > maxSizeKB) {
+      alert(`El tamaño del archivo debe estar entre ${minSizeKB} KB y ${maxSizeKB} KB.`);
+      fotoInput.value = ''; 
+    }
+  });
+</script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <footer>
+      <img src="img/Footer.png" class="footer-logo" oncontextmenu="return false;">
+    </footer>
+  </body>
+</html>
